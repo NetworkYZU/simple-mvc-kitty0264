@@ -36,13 +36,16 @@ public class ShowScore extends HttpServlet {
         if(student==null){
             address="/WEB-INF/score-report/UnknownStudent.jsp";
             request.setAttribute("student",student);
-        }else if(student.getScore()<60){
+        }
+        else if(student.getScore()<60){
             address="/WEB-INF/score-report/LowScore.jsp";
             request.setAttribute("student",student);
-        }else if(student.getScore()>70){
+        }
+        else if(student.getScore()>70){
             address="/WEB-INF/score-report/HighScore.jsp";
             request.setAttribute("student",student);
-        }else{
+        }
+        else{
             address="/WEB-INF/score-report/NormalScore.jsp";
             request.setAttribute("student",student);
         }
